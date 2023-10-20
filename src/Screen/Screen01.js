@@ -1,3 +1,4 @@
+import { StatusBar } from "expo-status-bar";
 import {
     StyleSheet,
     Image,
@@ -72,22 +73,30 @@ export default function App ({navigation}){
             <Text style={{ fontWeight: "bold", fontSize: 19, marginRight:'50px',color:"red" }}>Ở ĐÂU RẺ HƠN HOÀN TIỀN</Text>
             <Image
             source={require("../../assets/Group 1.png")}
-            style={{width:"33px", height:"33px"}}
+            style={{width:"30px", height:"30px"}}
         />
           </View>
-            <View style={{borderWidth:1, borderRadius:10, width:"100%", height:"45px" }}>
+            <View style={{borderWidth:1, borderRadius:10, width:"100%", height:"45px", alignItems:"center", justifyContent:"center" }}>
               <TouchableOpacity onPress={()=>{
                navigation.navigate('Screen2')
           }
-        } style={{flexDirection:"row", alignItems:"center"}}>
-          <Text style={{marginRight:"60px", marginLeft:"120px"}}>
+        } style={{flexDirection:"row"}}>
+          <Text style={{marginRight:"60px", marginLeft:"110px",fontSize: 14}}>
             4 MÀU-CHỌN MÀU
           </Text>
           <Image
             source={require("../../assets/Vector.png")}
-            style={{width:"33px", height:"33px"}}
+            style={{width:"25px", height:"20px"}}
         />
           </TouchableOpacity>
+            </View>
+            <View style={{borderWidth:1, borderRadius:10, width:"100%", height:"55px",alignItems:"center", justifyContent:"center", marginTop:"70px", backgroundColor:"red"}}>
+              <TouchableOpacity 
+              style={{justifyContent:"center", alignItems:"center"}}>
+                <Text style={{marginRight:"60px", marginLeft:"60px",fontSize: 25,fontWeight:"bold",color:"#F9F2F2", fontFamily: "roboto"}}>
+            CHỌN MUA
+                </Text>
+              </TouchableOpacity>
             </View>
       </View>
 </View>
